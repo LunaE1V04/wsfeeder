@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "wsFEEder"
+version = "0.1.0"
+description = ""
+authors = ["EnoaLuna <enoa.luna.vt@gmail.com>"]
+readme = "README.md"
+packages = [{include = "wsfeeder"}]
+license = "MIT"
+
+[tool.poetry.scripts]
+parse = "wsfeeder:parse"
+process = "wsfeeder:process"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+unidic = "^1.1.0"
+fugashi = {extras = ["unidic"], version = "^1.2.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
