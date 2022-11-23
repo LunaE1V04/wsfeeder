@@ -15,7 +15,7 @@ returns (sentence_structures, word_pool)
     raw_features: str
     elements: raw_features.split(',')
 """
-def parse(text):
+def parse(text, split_with_kuten=False):
     res_sentences = []
     parsing_sentence = []
     word_pool = {}
@@ -29,7 +29,7 @@ def parse(text):
         word_pool[feat] = word_pool.get(feat, set())
         word_pool[feat].add((word.surface, word.feature_raw))
 
-        if elements[0] == '補助記号' and elements[1] == '句点':
+        if split_with_kuten and elements[0] == '補助記号' and elements[1] == '句点':
             res_sentences.append(parsing_sentence)
             parsing_sentence = []
 
