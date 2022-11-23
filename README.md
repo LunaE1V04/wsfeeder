@@ -13,9 +13,10 @@ Let's feed word salads to your CCD-0500 (or other TTS softwares)!
 
 ## Setup
 
-Execute the following command.
+Execute the following commands.
 
 ```shell
+poetry install
 poetry run python -m unidic download
 ```
 
