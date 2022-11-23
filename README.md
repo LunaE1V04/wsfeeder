@@ -1,6 +1,10 @@
 # wsFEEder
 
 A simple Japanese word salads processor.
+
+- wsFEEder takes Japanese sentences and parses them into used words data and sentence structures.
+- wsFEEder makes word salads with the words data and sentence structures
+
 Let's feed word salads to your CCD-0500 (or other TTS softwares)!
 
 ## Install
