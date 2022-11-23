@@ -45,10 +45,10 @@ def parse_text_and_dump_data(input_path, pool_path, sentences_path, force=False)
     sentences = []
     word_pool = {}
 
-    if os.path.isfile(pool_path) or not force:
+    if os.path.isfile(pool_path) and not force:
         raise errors.FileAlreadyExistsException("%s already exists. If you want to overwrite, give -f or --force to command" % pool_path)
 
-    if os.path.isfile(sentences_path) or not force:
+    if os.path.isfile(sentences_path) and not force:
         raise errors.FileAlreadyExistsException("%s already exists. If you want to overwrite, give -f or --force to command" % sentences_path)
 
     with open(input_path) as input_fp, open(pool_path, 'wb') as pool_fp, open(sentences_path, 'wb') as sentences_fp:
