@@ -20,6 +20,7 @@ def process_sentences_from_dump(pool_path, sentences_path, number=0, randomize_s
     if randomize_sentences_order:
         random.shuffle(sentences)
 
+    n = number
     if n == 0:
         n = len(sentences)
     n = min(n, len(sentences))
